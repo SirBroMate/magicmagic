@@ -1,0 +1,12 @@
+{
+  "magicmagic.player.slurp": {
+    "sounds": [
+      {
+        "category": "player",
+        "name": "magicmagic:other/slurp",
+        "stream": false
+      }
+    ]
+  }
+}
+
