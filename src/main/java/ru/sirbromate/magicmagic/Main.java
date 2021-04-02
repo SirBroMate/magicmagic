@@ -1,6 +1,7 @@
 package ru.sirbromate.magicmagic;
 
 import net.fabricmc.api.ModInitializer;
+import ru.sirbromate.magicmagic.init.ModEnchanments;
 import ru.sirbromate.magicmagic.init.ModItems;
 import ru.sirbromate.magicmagic.init.ModSounds;
 
@@ -10,5 +11,6 @@ public class Main implements ModInitializer {
     public void onInitialize() {
         ModItems.register();
         ModSounds.register();
+        ModEnchanments.init();
     }
 }
