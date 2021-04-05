@@ -10,7 +10,7 @@ public class ModEnchanments {
 
     private static Enchantment REVERSE_POWER = Registry.register(Registry.ENCHANTMENT, new Identifier(Main.MODID, "reversepower"), new ReversePowerEnchantment());
 
-    public static void init(){
+    public static void init() {
 
     }
 }

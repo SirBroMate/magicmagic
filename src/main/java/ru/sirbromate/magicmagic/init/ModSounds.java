@@ -8,7 +8,7 @@ import ru.sirbromate.magicmagic.Main;
 public class ModSounds {
     public static final SoundEvent SLURP = register("player", "slurp");
 
-    public static void register() {
+    public static void init() {
     }
 
     private static SoundEvent register(String type, String id) {

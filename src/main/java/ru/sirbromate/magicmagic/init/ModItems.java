@@ -9,7 +9,7 @@ import ru.sirbromate.magicmagic.items.MagicalStrawItem;
 public class ModItems {
     public static Item MAGICSTRAW = new MagicalStrawItem();
 
-    public static void register() {
+    public static void init() {
         Registry.register(Registry.ITEM, new Identifier(Main.MODID, "magicstraw"), MAGICSTRAW);
 
     }

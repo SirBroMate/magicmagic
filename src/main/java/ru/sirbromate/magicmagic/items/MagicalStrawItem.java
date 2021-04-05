@@ -21,23 +21,23 @@ import ru.sirbromate.magicmagic.init.ModSounds;
 public class MagicalStrawItem extends Item {
     public MagicalStrawItem() {
         super(new FabricItemSettings()
-        .maxCount(1));
+                .maxCount(1));
     }
 
     @Override
     public ActionResult useOnEntity(ItemStack stack, PlayerEntity user, LivingEntity entity, Hand hand) {
         World world = MinecraftClient.getInstance().world;
 
-        if(!user.getItemCooldownManager().isCoolingDown(this)){entity.damage(DamageSource.DRYOUT, 1);
+        if (!user.getItemCooldownManager().isCoolingDown(this)) {
+            entity.damage(DamageSource.DRYOUT, 1);
             user.getItemCooldownManager().set(this, 10);
-            world.playSound(user, user.getX(),user.getY(), user.getZ(), ModSounds.SLURP, SoundCategory.PLAYERS, 1.0F , 1.0F);
 
-            if (entity.isUndead()){
+            world.playSound(user, user.getX(), user.getY(), user.getZ(), ModSounds.SLURP, SoundCategory.PLAYERS, 1.0F, 1.0F);
+
+            if (entity.isUndead()) {
                 user.damage(DamageSource.WITHER, 1);
             } else if (entity.getType() == EntityType.CREEPER) {
-                world.createExplosion(user, user.getX(),user.getY(),user.getZ(), 2 , Explosion.DestructionType.NONE);
-            } else{
-                user.heal(1);
+                world.createExplosion(user, user.getX(), user.getY(), user.getZ(), 2, Explosion.DestructionType.NONE);
             }
         }
 
