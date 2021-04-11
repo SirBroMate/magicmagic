@@ -4,6 +4,7 @@
   "package": "ru.sirbromate.magicmagic.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "DefaultBiomeFeatureMixin"
   ],
   "client": [
   ],

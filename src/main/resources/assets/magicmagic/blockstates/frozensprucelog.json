@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "magicmagic:block/frozensprucelog",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "magicmagic:block/frozensprucelog"
+    },
+    "axis=z": {
+      "model": "magicmagic:block/frozensprucelog_horizontal",
+      "x": 90
+    }
+  }
+}

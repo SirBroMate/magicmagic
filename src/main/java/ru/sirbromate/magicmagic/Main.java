@@ -1,19 +1,28 @@
 package ru.sirbromate.magicmagic;
 
 import net.fabricmc.api.ModInitializer;
-import ru.sirbromate.magicmagic.init.ModEnchanments;
-import ru.sirbromate.magicmagic.init.ModItems;
-import ru.sirbromate.magicmagic.init.ModSounds;
-import ru.sirbromate.magicmagic.init.ModStatusEffect;
+import net.minecraft.util.Identifier;
+import ru.sirbromate.magicmagic.init.*;
+import ru.sirbromate.magicmagic.itemgroup.ModItemGroup;
+import ru.sirbromate.magicmagic.world.DeltaStoneWorldGen;
 
 public class Main implements ModInitializer {
     public static String MODID = "magicmagic";
+    public static Identifier locate(String location) {
+        return new Identifier(MODID, location);
+    }
+
 
     @Override
     public void onInitialize() {
         ModItems.init();
+        ModBlocks.init();
         ModSounds.init();
-        ModEnchanments.init();
-        ModStatusEffect.init();
+        ModItemGroup.initialize();
+        DeltaStoneWorldGen.initialize();
+        ModTags.init();
+        ModBiomes.registerBiomes();
+        ModDimensions.init();
+        ModFeatures.init();
     }
 }

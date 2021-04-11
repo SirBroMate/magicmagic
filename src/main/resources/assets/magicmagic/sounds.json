@@ -7,6 +7,24 @@
         "stream": false
       }
     ]
+  },
+  "magicmagic.ambient.cold_ambient": {
+    "sounds": [
+      {
+        "category": "ambient",
+        "name": "magicmagic:ambient/cold_ambient",
+        "stream": false
+      }
+    ]
+  },
+  "magicmagic.ambient.thunder": {
+    "sounds": [
+      {
+        "category": "ambient",
+        "name": "magicmagic:ambient/thunder",
+        "stream": true
+      }
+    ]
   }
 }
 

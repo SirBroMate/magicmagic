@@ -17,11 +17,13 @@ import net.minecraft.util.Hand;
 import net.minecraft.world.World;
 import net.minecraft.world.explosion.Explosion;
 import ru.sirbromate.magicmagic.init.ModSounds;
+import ru.sirbromate.magicmagic.itemgroup.ModItemGroup;
 
 public class MagicalStrawItem extends Item {
     public MagicalStrawItem() {
         super(new FabricItemSettings()
-                .maxCount(1));
+                .maxCount(1)
+                .group(ModItemGroup.MAGICMAGIC_IG));
     }
 
     @Override

@@ -7,6 +7,8 @@ import ru.sirbromate.magicmagic.Main;
 
 public class ModSounds {
     public static final SoundEvent SLURP = register("player", "slurp");
+    public static final SoundEvent COLD_AMBIENT = register("ambient", "cold_ambient");
+    public static final SoundEvent THUNDER_AMBIUENT = register("ambient", "thunder");
 
     public static void init() {
     }

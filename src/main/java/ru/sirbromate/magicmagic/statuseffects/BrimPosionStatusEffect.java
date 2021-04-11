@@ -5,8 +5,6 @@ import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectType;
 
-import java.math.BigInteger;
-
 public class BrimPosionStatusEffect extends StatusEffect {
     public BrimPosionStatusEffect() {
         super(StatusEffectType.HARMFUL, 0xFF1832);
