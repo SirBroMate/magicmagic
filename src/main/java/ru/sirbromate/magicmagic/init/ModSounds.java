@@ -19,6 +19,6 @@ public class ModSounds {
     }
 
     public static Identifier makeID(String path) {
-        return new Identifier(Main.MODID, path);
+        return Main.locate(path);
     }
 }

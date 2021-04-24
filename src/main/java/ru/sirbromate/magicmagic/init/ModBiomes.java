@@ -1,7 +1,6 @@
 package ru.sirbromate.magicmagic.init;
 
 import net.fabricmc.fabric.mixin.biome.BuiltinBiomesAccessor;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.RegistryKey;
@@ -15,9 +14,9 @@ public class ModBiomes {
     public static final Biome FROZEN_DEAD_PLAINS = FrozenSpruceForestBiome.createDeadPlains();
     public static final Biome CRYSTAL_FIELDS = CrystalLandBiome.createCrystalFields();
 
-    private static final RegistryKey<Biome> FROZEN_FOREST_KEY = RegistryKey.of(Registry.BIOME_KEY, new Identifier(Main.MODID, "frozenforest"));
-    private static final RegistryKey<Biome> FROZEN_DEAD_PLAINS_KEY = RegistryKey.of(Registry.BIOME_KEY, new Identifier(Main.MODID, "frozendeadplains"));
-    private static final RegistryKey<Biome> CRYSTAL_FIELDS_KEY = RegistryKey.of(Registry.BIOME_KEY, new Identifier(Main.MODID, "crystalfields"));
+    private static final RegistryKey<Biome> FROZEN_FOREST_KEY = RegistryKey.of(Registry.BIOME_KEY, Main.locate("frozenforest"));
+    private static final RegistryKey<Biome> FROZEN_DEAD_PLAINS_KEY = RegistryKey.of(Registry.BIOME_KEY, Main.locate("frozendeadplains"));
+    private static final RegistryKey<Biome> CRYSTAL_FIELDS_KEY = RegistryKey.of(Registry.BIOME_KEY, Main.locate("crystalfields"));
 
     public static void registerBiomes() {
         Registry.register(BuiltinRegistries.BIOME, FROZEN_FOREST_KEY.getValue(), FROZEN_FOREST);

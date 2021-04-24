@@ -17,13 +17,13 @@ public class ModItems {
 
 
     public static void init() {
-        Registry.register(Registry.ITEM, new Identifier(Main.MODID, "magicstraw"), MAGICSTRAW);
-        Registry.register(Registry.ITEM, new Identifier(Main.MODID, "dirtxploder"), DIRTXPLODER);
-        Registry.register(Registry.ITEM, new Identifier(Main.MODID, "magicdelta"), MAGIC_DELTA);
-        Registry.register(Registry.ITEM, new Identifier(Main.MODID, "firedelta"), FIREDELTA);
-        Registry.register(Registry.ITEM, new Identifier(Main.MODID, "waterdelta"), WATERDELTA);
-        Registry.register(Registry.ITEM, new Identifier(Main.MODID, "electrodelta"), ELETRODELTA);
-        Registry.register(Registry.ITEM, new Identifier(Main.MODID, "firedeltapick"), FIREDELTA_PICK);
+        Registry.register(Registry.ITEM, Main.locate("magicstraw"), MAGICSTRAW);
+        Registry.register(Registry.ITEM, Main.locate("dirtxploder"), DIRTXPLODER);
+        Registry.register(Registry.ITEM, Main.locate("magicdelta"), MAGIC_DELTA);
+        Registry.register(Registry.ITEM, Main.locate("firedelta"), FIREDELTA);
+        Registry.register(Registry.ITEM, Main.locate("waterdelta"), WATERDELTA);
+        Registry.register(Registry.ITEM, Main.locate("electrodelta"), ELETRODELTA);
+        Registry.register(Registry.ITEM, Main.locate("firedeltapick"), FIREDELTA_PICK);
 
 
     }

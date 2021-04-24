@@ -39,9 +39,9 @@ public class DeltaStoneWorldGen {
             .repeat(2); // number of veins per chunk
 
     public static void initialize() {
-        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(Main.MODID, "magic_delta_stone_gen"), MAGIC_DELTA_STONE_GEN);
-        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(Main.MODID, "fire_delta_stone_gen"), FIRE_DELTA_STONE_GEN);
-        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(Main.MODID, "electro_delta_stone_gen"), ELECTRO_DELTA_STONE_GEN);
-        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(Main.MODID, "water_delta_stone_gen"), WATER_DELTA_STONE_GEN);
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, Main.locate("magic_delta_stone_gen"), MAGIC_DELTA_STONE_GEN);
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, Main.locate("fire_delta_stone_gen"), FIRE_DELTA_STONE_GEN);
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, Main.locate("electro_delta_stone_gen"), ELECTRO_DELTA_STONE_GEN);
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, Main.locate("water_delta_stone_gen"), WATER_DELTA_STONE_GEN);
     }
 }

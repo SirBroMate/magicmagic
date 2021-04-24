@@ -10,6 +10,6 @@ public class ModStatusEffect {
     public static final StatusEffect BRIM = new BrimPosionStatusEffect();
 
     public static void init() {
-        Registry.register(Registry.STATUS_EFFECT, new Identifier(Main.MODID, "brim"), BRIM);
+        Registry.register(Registry.STATUS_EFFECT, Main.locate("brim"), BRIM);
     }
 }

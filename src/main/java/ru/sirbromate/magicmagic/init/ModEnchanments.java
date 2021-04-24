@@ -8,7 +8,7 @@ import ru.sirbromate.magicmagic.enchs.ReversePowerEnchantment;
 
 public class ModEnchanments {
 
-    private static Enchantment REVERSE_POWER = Registry.register(Registry.ENCHANTMENT, new Identifier(Main.MODID, "reversepower"), new ReversePowerEnchantment());
+    private static Enchantment REVERSE_POWER = Registry.register(Registry.ENCHANTMENT, Main.locate("reversepower"), new ReversePowerEnchantment());
 
     public static void init() {
 
