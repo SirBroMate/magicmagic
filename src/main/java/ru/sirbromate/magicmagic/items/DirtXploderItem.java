@@ -28,7 +28,7 @@ public class DirtXploderItem extends Item {
             WorldCorruption.CORRUPTION.get(world).decreaseLevel();
         }
 
-        System.out.println(WorldCorruption.CORRUPTION.get(world).corruptionLevel());
+        System.out.println(WorldCorruption.CORRUPTION.get(world).corruptionLevel() + "-isclient?:" + world.isClient);
 
 
         return ActionResult.success(world.isClient);
