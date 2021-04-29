@@ -15,7 +15,7 @@ import ru.sirbromate.magicmagic.itemgroup.ModItemGroup;
 public class DeltaItem extends Item {
     public DeltaItem() {
         super(new FabricItemSettings()
-        .group(ModItemGroup.MAGICMAGIC_IG));
+                .group(ModItemGroup.MAGICMAGIC_IG));
     }
 
     @Override

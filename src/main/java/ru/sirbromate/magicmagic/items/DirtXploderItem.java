@@ -22,9 +22,9 @@ public class DirtXploderItem extends Item {
         BlockPos blockPos = context.getBlockPos();
         BlockState blockState = world.getBlockState(blockPos);
 
-        if (blockState == Blocks.DIRT.getDefaultState()){
+        if (blockState == Blocks.DIRT.getDefaultState()) {
             WorldCorruption.CORRUPTION.get(world).increaseLevel();
-        } else if (blockState == Blocks.DIAMOND_BLOCK.getDefaultState()){
+        } else if (blockState == Blocks.DIAMOND_BLOCK.getDefaultState()) {
             WorldCorruption.CORRUPTION.get(world).decreaseLevel();
         }
 
@@ -33,7 +33,6 @@ public class DirtXploderItem extends Item {
 
         return ActionResult.success(world.isClient);
     }
-
 
 
 }

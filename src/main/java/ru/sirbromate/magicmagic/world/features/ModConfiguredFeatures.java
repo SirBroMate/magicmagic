@@ -5,7 +5,6 @@ import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.biome.GenerationSettings;
 import net.minecraft.world.gen.GenerationStep;
-import net.minecraft.world.gen.decorator.ChanceDecoratorConfig;
 import net.minecraft.world.gen.decorator.CountExtraDecoratorConfig;
 import net.minecraft.world.gen.decorator.Decorator;
 import net.minecraft.world.gen.decorator.NopeDecoratorConfig;
@@ -27,7 +26,7 @@ public class ModConfiguredFeatures {
         builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, FROZEN_FOREST_TREE);
     }
 
-    public static void addCrystalSpikes(GenerationSettings.Builder builder){
+    public static void addCrystalSpikes(GenerationSettings.Builder builder) {
         builder.feature(GenerationStep.Feature.SURFACE_STRUCTURES, CRSTAL_SPIKE);
     }
 }

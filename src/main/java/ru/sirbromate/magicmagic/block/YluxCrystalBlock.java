@@ -9,19 +9,19 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BlockView;
 
-
-public class CrystalDeltaLPBlock extends Block {
-    public CrystalDeltaLPBlock() {
-        super(FabricBlockSettings.of(Material.GLASS)
-                .strength(2.0F)
-                .sounds(BlockSoundGroup.GLASS)
+public class YluxCrystalBlock extends Block {
+    public YluxCrystalBlock() {
+        super(FabricBlockSettings.of(Material.STONE)
+                .strength(3.8F)
+                .sounds(BlockSoundGroup.STONE)
                 .breakByTool(FabricToolTags.PICKAXES, 2)
-                .luminance(7)
-                .blockVision(CrystalDeltaLPBlock::never)
+                .requiresTool()
+                .blockVision(YluxCrystalBlock::never)
                 .nonOpaque());
     }
 
-    private static boolean never(BlockState state, BlockView world, BlockPos pos) {
+    private static boolean never(BlockState blockState, BlockView blockView, BlockPos blockPos) {
         return false;
+
     }
 }

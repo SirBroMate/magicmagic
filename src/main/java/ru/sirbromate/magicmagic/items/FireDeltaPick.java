@@ -1,27 +1,15 @@
 package ru.sirbromate.magicmagic.items;
 
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemUsageContext;
 import net.minecraft.item.PickaxeItem;
-import net.minecraft.particle.ParticleEffect;
-import net.minecraft.particle.ParticleType;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.tag.BlockTags;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.Hand;
-import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import ru.sirbromate.magicmagic.init.ModBiomes;
-import ru.sirbromate.magicmagic.init.ModBlocks;
 import ru.sirbromate.magicmagic.init.ModTags;
 import ru.sirbromate.magicmagic.itemgroup.ModItemGroup;
 
@@ -36,12 +24,12 @@ public class FireDeltaPick extends PickaxeItem {
     @Override
     public boolean canMine(BlockState state, World world, BlockPos pos, PlayerEntity miner) {
         if (state.isIn(BlockTags.ICE)) {
-            world.breakBlock(pos,false );
-            world.addParticle(ParticleTypes.SMOKE,pos.getX() + 0.5F, pos.getY() + 0.5F, pos.getZ() + 0.5F, 0,0.1F,0);
-            world.playSound(null, pos.getX() + 0.5F,pos.getY() + 0.5F,pos.getZ() + 0.5F, SoundEvents.BLOCK_LAVA_EXTINGUISH, SoundCategory.BLOCKS, 1.2F, 0.7F);
+            world.breakBlock(pos, false);
+            world.addParticle(ParticleTypes.SMOKE, pos.getX() + 0.5F, pos.getY() + 0.5F, pos.getZ() + 0.5F, 0, 0.1F, 0);
+            world.playSound(null, pos.getX() + 0.5F, pos.getY() + 0.5F, pos.getZ() + 0.5F, SoundEvents.BLOCK_LAVA_EXTINGUISH, SoundCategory.BLOCKS, 1.2F, 0.7F);
         }
 
-        if (state.isIn(ModTags.FIREDELTA_TAG)){
+        if (state.isIn(ModTags.FIREDELTA_TAG)) {
             return false;
         }
 

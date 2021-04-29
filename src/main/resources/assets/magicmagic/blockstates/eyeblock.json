@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "magicmagic:block/eyeblock",
+      "x": 90
+    },
+    "facing=east": {
+      "model": "magicmagic:block/eyeblock",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "magicmagic:block/eyeblock"
+    },
+    "facing=south": {
+      "model": "magicmagic:block/eyeblock",
+      "y": 180
+    },
+    "facing=up": {
+      "model": "magicmagic:block/eyeblock",
+      "x": 270
+    },
+    "facing=west": {
+      "model": "magicmagic:block/eyeblock",
+      "y": 270
+    }
+  }
+}

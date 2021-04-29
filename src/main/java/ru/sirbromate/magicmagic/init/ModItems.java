@@ -1,10 +1,12 @@
 package ru.sirbromate.magicmagic.init;
 
 import net.minecraft.item.Item;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import ru.sirbromate.magicmagic.Main;
-import ru.sirbromate.magicmagic.items.*;
+import ru.sirbromate.magicmagic.items.DeltaItem;
+import ru.sirbromate.magicmagic.items.DirtXploderItem;
+import ru.sirbromate.magicmagic.items.FireDeltaPick;
+import ru.sirbromate.magicmagic.items.MagicalStrawItem;
 
 public class ModItems {
     public static Item MAGICSTRAW = new MagicalStrawItem();

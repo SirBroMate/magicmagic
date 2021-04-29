@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    " p ",
+    " i "
+  ],
+  "key": {
+    "#": {
+      "item": "magicmagic:firedelta"
+    },
+    "p": {
+      "item": "minecraft:iron_pickaxe"
+    },
+    "i": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "magicmagic:firedeltapick",
+    "count": 1
+  }
+}

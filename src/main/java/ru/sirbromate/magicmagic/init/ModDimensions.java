@@ -1,6 +1,5 @@
 package ru.sirbromate.magicmagic.init;
 
-import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.World;

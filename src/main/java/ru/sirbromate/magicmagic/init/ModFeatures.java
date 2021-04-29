@@ -1,6 +1,5 @@
 package ru.sirbromate.magicmagic.init;
 
-import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import ru.sirbromate.magicmagic.Main;
 import ru.sirbromate.magicmagic.world.features.tree.ModFeatureConfigs;

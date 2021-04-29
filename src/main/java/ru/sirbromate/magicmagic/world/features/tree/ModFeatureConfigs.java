@@ -2,7 +2,6 @@ package ru.sirbromate.magicmagic.world.features.tree;
 
 import net.minecraft.block.Block;
 import net.minecraft.world.gen.UniformIntDistribution;
-import net.minecraft.world.gen.feature.DefaultFeatureConfig;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.SingleStateFeatureConfig;
 import net.minecraft.world.gen.feature.TreeFeatureConfig;

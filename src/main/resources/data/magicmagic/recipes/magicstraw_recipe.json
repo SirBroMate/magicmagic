@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#L#",
+    "# #",
+    "#L#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:paper"
+    },
+    "L": {
+      "item": "magicmagic:magicdelta"
+    }
+  },
+  "result": {
+    "item": "magicmagic:magicstraw",
+    "count": 1
+  }
+}

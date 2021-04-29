@@ -2,9 +2,6 @@ package ru.sirbromate.magicmagic.world.biomes;
 
 import net.minecraft.block.Blocks;
 import net.minecraft.particle.ParticleTypes;
-import net.minecraft.sound.BiomeAdditionsSound;
-import net.minecraft.sound.BiomeMoodSound;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.world.biome.*;
 import net.minecraft.world.gen.feature.DefaultBiomeFeatures;
 import net.minecraft.world.gen.surfacebuilder.ConfiguredSurfaceBuilder;

@@ -31,7 +31,9 @@ public class ModBlocks {
     public static Block PORTAL_BLOCK = new BlockPortal();
     public static Block CRYSTAL_DELTA = new CrystalDeltaBlock();
     public static Block CRYSTAL_DELTA_LOWPRESSURE = new CrystalDeltaLPBlock();
-    
+    public static Block EYEBLOCK = new EyeBlock();
+    public static Block YLUXCRYSTAL = new YluxCrystalBlock();
+
     public static void init() {
         Registry.register(Registry.BLOCK, Main.locate("magicdeltastone"), MAGICDELTA_STONE);
         Registry.register(Registry.BLOCK, Main.locate("magicdeltabricks"), MAGICDELTA_BRICKS);
@@ -51,6 +53,8 @@ public class ModBlocks {
         Registry.register(Registry.BLOCK, Main.locate("blockportal"), PORTAL_BLOCK);
         Registry.register(Registry.BLOCK, Main.locate("crystaldelta"), CRYSTAL_DELTA);
         Registry.register(Registry.BLOCK, Main.locate("crystaldelta_lowpressure"), CRYSTAL_DELTA_LOWPRESSURE);
+        Registry.register(Registry.BLOCK, Main.locate("eyeblock"), EYEBLOCK);
+        Registry.register(Registry.BLOCK, Main.locate("yluxcrystal"), YLUXCRYSTAL);
 
         // Item blocks
         Registry.register(Registry.ITEM, Main.locate("magicdeltastone"), new BlockItem(MAGICDELTA_STONE, new Item.Settings().group(ModItemGroup.MAGICMAGIC_IG)));
@@ -71,5 +75,7 @@ public class ModBlocks {
         Registry.register(Registry.ITEM, Main.locate("blockportal"), new BlockItem(PORTAL_BLOCK, new Item.Settings().group(ModItemGroup.MAGICMAGIC_IG)));
         Registry.register(Registry.ITEM, Main.locate("crystaldelta"), new BlockItem(CRYSTAL_DELTA, new Item.Settings().group(ModItemGroup.MAGICMAGIC_IG)));
         Registry.register(Registry.ITEM, Main.locate("crystaldelta_lowpressure"), new BlockItem(CRYSTAL_DELTA_LOWPRESSURE, new Item.Settings().group(ModItemGroup.MAGICMAGIC_IG)));
+        Registry.register(Registry.ITEM, Main.locate("eyeblock"), new BlockItem(EYEBLOCK, new Item.Settings().group(ModItemGroup.MAGICMAGIC_IG)));
+        Registry.register(Registry.ITEM, Main.locate("yluxcrystal"), new BlockItem(YLUXCRYSTAL, new Item.Settings().group(ModItemGroup.MAGICMAGIC_IG)));
     }
 }

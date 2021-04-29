@@ -1,7 +1,6 @@
 package ru.sirbromate.magicmagic.init;
 
 import net.minecraft.entity.effect.StatusEffect;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import ru.sirbromate.magicmagic.Main;
 import ru.sirbromate.magicmagic.statuseffects.BrimPosionStatusEffect;
