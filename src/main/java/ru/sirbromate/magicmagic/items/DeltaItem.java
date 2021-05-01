@@ -22,19 +22,23 @@ public class DeltaItem extends Item {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity entity, Hand hand) {
         ItemStack itemStack = entity.getStackInHand(hand);
         Item item = itemStack.getItem();
+
         if (item == ModItems.ELETRODELTA) {
             entity.damage(DamageSource.LIGHTNING_BOLT, 5);
-        } else if (item == ModItems.FIREDELTA) {
+        }
+        else if (item == ModItems.FIREDELTA) {
             entity.setFireTicks(40);
-        } else if (item == ModItems.WATERDELTA) {
+        }
+        else if (item == ModItems.WATERDELTA) {
             entity.damage(DamageSource.DROWN, 5);
-        } else if (item == ModItems.MAGIC_DELTA) {
+        }
+        else if (item == ModItems.MAGIC_DELTA) {
             entity.damage(DamageSource.MAGIC, 5);
         }
 
         if (!entity.isCreative()) {
             itemStack.decrement(1);
         }
-        return new TypedActionResult<ItemStack>(ActionResult.SUCCESS, entity.getStackInHand(hand));
+        return new TypedActionResult<>(ActionResult.SUCCESS, entity.getStackInHand(hand));
     }
 }

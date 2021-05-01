@@ -22,6 +22,7 @@ public class DirtXploderItem extends Item {
         BlockPos blockPos = context.getBlockPos();
         BlockState blockState = world.getBlockState(blockPos);
 
+        // Sets world's corruption level
         if (blockState == Blocks.DIRT.getDefaultState()) {
             WorldCorruption.CORRUPTION.get(world).increaseLevel();
         } else if (blockState == Blocks.DIAMOND_BLOCK.getDefaultState()) {

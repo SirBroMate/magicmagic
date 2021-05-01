@@ -3,10 +3,7 @@ package ru.sirbromate.magicmagic.init;
 import net.minecraft.item.Item;
 import net.minecraft.util.registry.Registry;
 import ru.sirbromate.magicmagic.Main;
-import ru.sirbromate.magicmagic.items.DeltaItem;
-import ru.sirbromate.magicmagic.items.DirtXploderItem;
-import ru.sirbromate.magicmagic.items.FireDeltaPick;
-import ru.sirbromate.magicmagic.items.MagicalStrawItem;
+import ru.sirbromate.magicmagic.items.*;
 
 public class ModItems {
     public static Item MAGICSTRAW = new MagicalStrawItem();
@@ -16,6 +13,7 @@ public class ModItems {
     public static Item WATERDELTA = new DeltaItem();
     public static Item ELETRODELTA = new DeltaItem();
     public static Item FIREDELTA_PICK = new FireDeltaPick();
+    public static Item BRIMBALL = new BrimBallItem();
 
 
     public static void init() {
@@ -26,8 +24,7 @@ public class ModItems {
         Registry.register(Registry.ITEM, Main.locate("waterdelta"), WATERDELTA);
         Registry.register(Registry.ITEM, Main.locate("electrodelta"), ELETRODELTA);
         Registry.register(Registry.ITEM, Main.locate("firedeltapick"), FIREDELTA_PICK);
-
-
+        Registry.register(Registry.ITEM, Main.locate("brimball"), BRIMBALL);
     }
 
 }

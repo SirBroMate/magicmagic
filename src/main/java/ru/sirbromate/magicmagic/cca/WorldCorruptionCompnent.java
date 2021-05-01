@@ -24,13 +24,13 @@ public class WorldCorruptionCompnent implements ComponentV3, AutoSyncedComponent
     }
 
     public void increaseLevel() {
-        this.corruptionLevel = this.corruptionLevel + 10;
+        this.corruptionLevel++;
         this.setBounds();
         WorldCorruption.CORRUPTION.sync(world);
     }
 
     public void decreaseLevel() {
-        this.corruptionLevel = this.corruptionLevel - 10;
+        this.corruptionLevel++;
         this.setBounds();
         WorldCorruption.CORRUPTION.sync(world);
     }

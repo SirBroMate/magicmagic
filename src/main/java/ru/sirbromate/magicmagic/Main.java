@@ -17,7 +17,6 @@ public class Main implements ModInitializer {
         return new Identifier(MODID, location);
     }
 
-
     @Override
     public void onInitialize() {
         ModItems.init();
@@ -29,5 +28,7 @@ public class Main implements ModInitializer {
         ModBiomes.registerBiomes();
         ModDimensions.init();
         ModFeatures.init();
+        ModEntities.init();
+        ModStatusEffect.init();
     }
 }

@@ -33,7 +33,7 @@ public class CrystalLeavesBlock extends LeavesBlock {
         ItemStack itemStack = player.getStackInHand(player.getActiveHand());
         Item item = itemStack.getItem();
 
-        if (item != FabricToolTags.PICKAXES){
+        if (item != FabricToolTags.PICKAXES) {
             player.damage(DamageSource.GENERIC, 1);
         }
 

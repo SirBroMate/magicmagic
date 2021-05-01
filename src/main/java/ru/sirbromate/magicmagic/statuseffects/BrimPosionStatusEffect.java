@@ -4,6 +4,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectType;
+import net.minecraft.sound.SoundEvents;
 
 public class BrimPosionStatusEffect extends StatusEffect {
     public BrimPosionStatusEffect() {
@@ -12,12 +13,12 @@ public class BrimPosionStatusEffect extends StatusEffect {
 
     @Override
     public boolean canApplyUpdateEffect(int duration, int amplifier) {
-        // In our case, we just make it return true so that it applies the status effect every tick.
         return true;
     }
 
     @Override
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
-        entity.damage(DamageSource.MAGIC, 3);
+        entity.damage(DamageSource.MAGIC, 3 * (1 + (amplifier / 2)));
+        entity.playSound(SoundEvents.BLOCK_HONEY_BLOCK_STEP, 0.3F, 0.1F);
     }
 }
