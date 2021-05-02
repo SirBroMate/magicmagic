@@ -30,7 +30,7 @@ public class WorldCorruptionCompnent implements ComponentV3, AutoSyncedComponent
     }
 
     public void decreaseLevel() {
-        this.corruptionLevel++;
+        this.corruptionLevel--;
         this.setBounds();
         WorldCorruption.CORRUPTION.sync(world);
     }
