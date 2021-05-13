@@ -35,9 +35,7 @@ public class ReversePowerEnchantment extends Enchantment {
             } else {
                 ((LivingEntity) target).heal((PlayerPower / EntityPower) * level);
             }
-
         }
-
         super.onTargetDamaged(user, target, level);
     }
 }

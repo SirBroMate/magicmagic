@@ -42,13 +42,13 @@ public class WorldRendererMixin {
     )
     private void redirectMoonTexture(TextureManager textureManager, Identifier id) {
         if ((WorldCorruption.CORRUPTION.get(world).corruptionLevel() >= 10) && (WorldCorruption.CORRUPTION.get(world).corruptionLevel() < 50)) {
-            this.textureManager.bindTexture(CURSED_MOON_PHASES);
+            this.textureManager.bindTexture(CURSED_MOON_PHASES); // 10-50
         } else if ((WorldCorruption.CORRUPTION.get(world).corruptionLevel() >= 50) && (WorldCorruption.CORRUPTION.get(world).corruptionLevel() < 100)) {
-            this.textureManager.bindTexture(BLOODY_MOON_PHASES);
+            this.textureManager.bindTexture(BLOODY_MOON_PHASES); // 50-100
         } else if (WorldCorruption.CORRUPTION.get(world).corruptionLevel() >= 100) {
-            this.textureManager.bindTexture(CORRUPTED_MOON_PHASES);
+            this.textureManager.bindTexture(CORRUPTED_MOON_PHASES); //100+
         } else {
-            this.textureManager.bindTexture(MOON_PHASES);
+            this.textureManager.bindTexture(MOON_PHASES); //0-9
         }
     }
 }

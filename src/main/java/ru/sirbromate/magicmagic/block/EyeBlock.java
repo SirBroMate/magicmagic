@@ -28,6 +28,7 @@ public class EyeBlock extends FacingBlock {
         return state.with(FACING, rotation.rotate(state.get(FACING)));
     }
 
+
     public BlockState mirror(BlockState state, BlockMirror mirror) {
         return state.rotate(mirror.getRotation(state.get(FACING)));
     }

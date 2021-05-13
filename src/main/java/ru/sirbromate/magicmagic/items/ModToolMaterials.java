@@ -4,6 +4,7 @@ import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.util.Lazy;
+import ru.sirbromate.magicmagic.init.ModItems;
 
 import java.util.function.Supplier;
 
@@ -11,7 +12,7 @@ import java.util.function.Supplier;
 public enum ModToolMaterials implements ToolMaterial {
 
     DELTA(3, 1023, 9.0F, 3.0F, 25, () -> {
-        return Ingredient.ofItems(Items.NETHERITE_INGOT);
+        return Ingredient.ofItems(ModItems.MAGIC_DELTA);
     });
 
     private final int miningLevel;

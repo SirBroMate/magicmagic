@@ -18,7 +18,7 @@ public class BrimPosionStatusEffect extends StatusEffect {
 
     @Override
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
-        entity.damage(DamageSource.MAGIC, 3 * (1 + (amplifier / 2)));
+        entity.damage(DamageSource.MAGIC, 3 * (1 + (amplifier / 2))); // 3.5 | 4 | 5 | etc
         entity.playSound(SoundEvents.BLOCK_HONEY_BLOCK_STEP, 0.3F, 0.1F);
     }
 }

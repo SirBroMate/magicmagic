@@ -14,6 +14,7 @@ public class ModItems {
     public static Item ELETRODELTA = new DeltaItem();
     public static Item FIREDELTA_PICK = new FireDeltaPick();
     public static Item BRIMBALL = new BrimBallItem();
+    public static Item BRIM_STAFF = new BrimStaff();
 
 
     public static void init() {
@@ -25,6 +26,7 @@ public class ModItems {
         Registry.register(Registry.ITEM, Main.locate("electrodelta"), ELETRODELTA);
         Registry.register(Registry.ITEM, Main.locate("firedeltapick"), FIREDELTA_PICK);
         Registry.register(Registry.ITEM, Main.locate("brimball"), BRIMBALL);
+        Registry.register(Registry.ITEM, Main.locate("brimstaff"), BRIM_STAFF);
     }
 
 }
