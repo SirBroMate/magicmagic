@@ -120,6 +120,7 @@ public class CrystalSpikeFeature extends Feature<SingleStateFeatureConfig> {
                     Block block = worldAccess.getBlockState(blockPos3).getBlock();
                     if (this.isCrystalBlock(block) || block == ModBlocks.CRYSTAL_DELTA_LOWPRESSURE) {
                         if (bl) {
+
                             this.setBlockState(worldAccess, blockPos3, Blocks.WATER.getDefaultState());
                         } else {
                             this.setBlockState(worldAccess, blockPos3, Blocks.AIR.getDefaultState());
@@ -136,6 +137,7 @@ public class CrystalSpikeFeature extends Feature<SingleStateFeatureConfig> {
         if (world.getBlockState(pos.up()).isOf(Blocks.SNOW)) {
             this.setBlockState(world, pos.up(), Blocks.AIR.getDefaultState());
         }
+        
 
     }
 

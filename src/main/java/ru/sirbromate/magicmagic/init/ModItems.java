@@ -13,6 +13,9 @@ public class ModItems {
     public static Item WATERDELTA = new DeltaItem();
     public static Item ELETRODELTA = new DeltaItem();
     public static Item FIREDELTA_PICK = new FireDeltaPick();
+    public static Item ELECTRODELTA_PICK = new ElectroDeltaPick();
+    public static Item WATERDELTA_PICK = new WaterDeltaPick();
+    public static Item MAGICDELTA_PICK = new MagicDeltaPick();
     public static Item BRIMBALL = new BrimBallItem();
     public static Item BRIM_STAFF = new BrimStaff();
 
@@ -25,6 +28,9 @@ public class ModItems {
         Registry.register(Registry.ITEM, Main.locate("waterdelta"), WATERDELTA);
         Registry.register(Registry.ITEM, Main.locate("electrodelta"), ELETRODELTA);
         Registry.register(Registry.ITEM, Main.locate("firedeltapick"), FIREDELTA_PICK);
+        Registry.register(Registry.ITEM, Main.locate("waterdeltapick"), WATERDELTA_PICK);
+        Registry.register(Registry.ITEM, Main.locate("magicdeltapick"), MAGICDELTA_PICK);
+        Registry.register(Registry.ITEM, Main.locate("electrodeltapick"), ELECTRODELTA_PICK);
         Registry.register(Registry.ITEM, Main.locate("brimball"), BRIMBALL);
         Registry.register(Registry.ITEM, Main.locate("brimstaff"), BRIM_STAFF);
     }

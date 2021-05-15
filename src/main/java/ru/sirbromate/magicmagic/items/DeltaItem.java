@@ -25,14 +25,11 @@ public class DeltaItem extends Item {
 
         if (item == ModItems.ELETRODELTA) {
             entity.damage(DamageSource.LIGHTNING_BOLT, 5);
-        }
-        else if (item == ModItems.FIREDELTA) {
+        } else if (item == ModItems.FIREDELTA) {
             entity.setFireTicks(40);
-        }
-        else if (item == ModItems.WATERDELTA) {
+        } else if (item == ModItems.WATERDELTA) {
             entity.damage(DamageSource.DROWN, 5);
-        }
-        else if (item == ModItems.MAGIC_DELTA) {
+        } else if (item == ModItems.MAGIC_DELTA) {
             entity.damage(DamageSource.MAGIC, 5);
         }
 

@@ -16,14 +16,14 @@ import ru.sirbromate.magicmagic.itemgroup.ModItemGroup;
 public class BrimBallItem extends Item {
     public BrimBallItem() {
         super(new FabricItemSettings().maxCount(16)
-        .group(ModItemGroup.MAGICMAGIC_IG));
+                .group(ModItemGroup.MAGICMAGIC_IG));
     }
 
     public TypedActionResult<ItemStack> use(World world, PlayerEntity entity, Hand hand) {
         ItemStack itemStack = entity.getStackInHand(hand);
         world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), SoundEvents.ENTITY_SNOWBALL_THROW, SoundCategory.NEUTRAL, 0.5F, 1F);
 
-		entity.getItemCooldownManager().set(this, 5);
+        entity.getItemCooldownManager().set(this, 5);
 
         if (!world.isClient) {
             BrimBallProjectile brimBall = new BrimBallProjectile(world, entity);
