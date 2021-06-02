@@ -1,14 +1,15 @@
 plugins {
-    id 'fabric-loom' version '0.7-SNAPSHOT'
+    id 'fabric-loom' version '0.8-SNAPSHOT'
     id 'maven-publish'
 }
 
-sourceCompatibility = JavaVersion.VERSION_1_8
-targetCompatibility = JavaVersion.VERSION_1_8
+sourceCompatibility = JavaVersion.VERSION_16
+targetCompatibility = JavaVersion.VERSION_16
 
 archivesBaseName = project.archives_base_name
 version = project.mod_version
 group = project.maven_group
+
 
 repositories {
     maven {
@@ -34,8 +35,8 @@ dependencies {
         exclude(group: "net.fabricmc.fabric-api")
     }
 
-    modCompile "io.github.onyxstudios:Cardinal-Components-API:2.8.1"
-    include "io.github.onyxstudios:Cardinal-Components-API:2.8.1"
+    modImplementation "io.github.onyxstudios:Cardinal-Components-API:3.0.0-nightly.1.17-pre2"
+    include "io.github.onyxstudios:Cardinal-Components-API:3.0.0-nightly.1.17-pre2"
 
     // PSA: Some older mods, compiled on Loom 0.2.1, might have outdated Maven POMs.
     // You may need to force-disable transitiveness on them.
@@ -44,13 +45,8 @@ dependencies {
 processResources {
     inputs.property "version", project.version
 
-    from(sourceSets.main.resources.srcDirs) {
-        include "fabric.mod.json"
+    filesMatching("fabric.mod.json") {
         expand "version": project.version
-    }
-
-    from(sourceSets.main.resources.srcDirs) {
-        exclude "fabric.mod.json"
     }
 }
 

@@ -28,7 +28,7 @@ public class BrimBallItem extends Item {
         if (!world.isClient) {
             BrimBallProjectile brimBall = new BrimBallProjectile(world, entity);
             brimBall.setItem(itemStack);
-            brimBall.setProperties(entity, entity.pitch, entity.yaw, 0.0F, 1.5F, 0F);
+            brimBall.setProperties(entity, entity.prevPitch, entity.prevYaw, 0.0F, 1.5F, 0F);
             world.spawnEntity(brimBall);
         }
 

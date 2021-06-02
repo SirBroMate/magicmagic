@@ -2,7 +2,7 @@ package ru.sirbromate.magicmagic.cca;
 
 import dev.onyxstudios.cca.api.v3.component.ComponentV3;
 import dev.onyxstudios.cca.api.v3.component.sync.AutoSyncedComponent;
-import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.world.World;
@@ -51,13 +51,13 @@ public class WorldCorruptionCompnent implements ComponentV3, AutoSyncedComponent
     }
 
     @Override
-    public void readFromNbt(CompoundTag tag) {
-        this.corruptionLevel = tag.getInt(CORRUPTION_KEY);
+    public void readFromNbt(NbtCompound nbt) {
+        this.corruptionLevel = nbt.getInt(CORRUPTION_KEY);
     }
 
     @Override
-    public void writeToNbt(CompoundTag tag) {
-        tag.putInt(CORRUPTION_KEY, corruptionLevel);
+    public void writeToNbt(NbtCompound nbt) {
+        nbt.putInt(CORRUPTION_KEY, corruptionLevel);
     }
 
     @Override

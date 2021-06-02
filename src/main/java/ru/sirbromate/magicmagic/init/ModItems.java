@@ -1,6 +1,12 @@
 package ru.sirbromate.magicmagic.init;
 
+import net.minecraft.block.AbstractBlock;
+import net.minecraft.block.Material;
+import net.minecraft.block.SaplingBlock;
+import net.minecraft.block.sapling.SaplingGenerator;
+import net.minecraft.block.sapling.SpruceSaplingGenerator;
 import net.minecraft.item.Item;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.registry.Registry;
 import ru.sirbromate.magicmagic.Main;
 import ru.sirbromate.magicmagic.items.*;

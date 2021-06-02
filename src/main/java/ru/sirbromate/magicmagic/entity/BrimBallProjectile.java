@@ -67,7 +67,7 @@ public class BrimBallProjectile extends ThrownItemEntity {
         super.onCollision(hitResult);
         if (!this.world.isClient) {
             this.world.sendEntityStatus(this, (byte) 3);
-            this.remove();
+            this.remove(RemovalReason.DISCARDED);
         }
     }
 

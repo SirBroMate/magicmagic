@@ -2,8 +2,11 @@ package ru.sirbromate.magicmagic.init;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
+import net.minecraft.block.SaplingBlock;
+import net.minecraft.block.sapling.SpruceSaplingGenerator;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.sound.BlockSoundGroup;
@@ -33,6 +36,7 @@ public class ModBlocks {
     public static Block CRYSTAL_DELTA_LOWPRESSURE = new CrystalDeltaLPBlock();
     public static Block EYEBLOCK = new EyeBlock();
     public static Block YLUXCRYSTAL = new YluxCrystalBlock();
+    public static Block FROZEN_SAPLING = new FrozenSaplingBlock(new SpruceSaplingGenerator(), AbstractBlock.Settings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.GRASS));
 
     public static void init() {
         Registry.register(Registry.BLOCK, Main.locate("magicdeltastone"), MAGICDELTA_STONE);
@@ -55,6 +59,7 @@ public class ModBlocks {
         Registry.register(Registry.BLOCK, Main.locate("crystaldelta_lowpressure"), CRYSTAL_DELTA_LOWPRESSURE);
         Registry.register(Registry.BLOCK, Main.locate("eyeblock"), EYEBLOCK);
         Registry.register(Registry.BLOCK, Main.locate("yluxcrystal"), YLUXCRYSTAL);
+        Registry.register(Registry.BLOCK, Main.locate("frozensapling"), FROZEN_SAPLING);
 
         // Item blocks
         Registry.register(Registry.ITEM, Main.locate("magicdeltastone"), new BlockItem(MAGICDELTA_STONE, new Item.Settings().group(ModItemGroup.MAGICMAGIC_IG)));
@@ -77,5 +82,6 @@ public class ModBlocks {
         Registry.register(Registry.ITEM, Main.locate("crystaldelta_lowpressure"), new BlockItem(CRYSTAL_DELTA_LOWPRESSURE, new Item.Settings().group(ModItemGroup.MAGICMAGIC_IG)));
         Registry.register(Registry.ITEM, Main.locate("eyeblock"), new BlockItem(EYEBLOCK, new Item.Settings().group(ModItemGroup.MAGICMAGIC_IG)));
         Registry.register(Registry.ITEM, Main.locate("yluxcrystal"), new BlockItem(YLUXCRYSTAL, new Item.Settings().group(ModItemGroup.MAGICMAGIC_IG)));
+        Registry.register(Registry.ITEM, Main.locate("frozensapling"), new BlockItem(FROZEN_SAPLING, new Item.Settings().group(ModItemGroup.MAGICMAGIC_IG)));
     }
 }

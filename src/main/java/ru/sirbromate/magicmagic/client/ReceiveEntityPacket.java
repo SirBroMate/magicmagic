@@ -29,8 +29,8 @@ public class ReceiveEntityPacket {
 
                 e.updateTrackedPosition(pos);
                 e.setPos(pos.x, pos.y, pos.z);
-                e.pitch = pitch;
-                e.yaw = yaw;
+                e.prevPitch = pitch;
+                e.prevYaw = yaw;
                 e.setEntityId(entityId);
                 e.setUuid(uuid);
 

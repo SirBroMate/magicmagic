@@ -7,7 +7,7 @@ import ru.sirbromate.magicmagic.init.ModEntities;
 public class BrimBallRender {
 
     public static void init(){
-        EntityRendererRegistry.INSTANCE.register(ModEntities.PackedSnowballEntityType, (dispatcher, context) ->
-                new FlyingItemEntityRenderer(dispatcher, context.getItemRenderer()));
+        EntityRendererRegistry.INSTANCE.register(ModEntities.PackedSnowballEntityType, (dispatcher) ->
+                new FlyingItemEntityRenderer(dispatcher));
     }
 }

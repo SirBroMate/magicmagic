@@ -1,6 +1,8 @@
 {
   "effects": "minecraft:the_nether",
-  "logical_height": 255,
+  "logical_height": 256,
+  "height": 256,
+  "min_y": 0,
   "ultrawarm": false,
   "natural": false,
   "ambient_light": 0.05,

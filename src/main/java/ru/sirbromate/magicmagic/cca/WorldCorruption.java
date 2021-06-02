@@ -4,6 +4,7 @@ import dev.onyxstudios.cca.api.v3.component.ComponentKey;
 import dev.onyxstudios.cca.api.v3.component.ComponentRegistryV3;
 import dev.onyxstudios.cca.api.v3.world.WorldComponentFactoryRegistry;
 import dev.onyxstudios.cca.api.v3.world.WorldComponentInitializer;
+
 import ru.sirbromate.magicmagic.Main;
 
 public class WorldCorruption implements WorldComponentInitializer {

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    " p ",
+    " i "
+  ],
+  "key": {
+    "#": {
+      "item": "magicmagic:waterdelta"
+    },
+    "p": {
+      "item": "minecraft:iron_pickaxe"
+    },
+    "i": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "magicmagic:waterdeltapick",
+    "count": 1
+  }
+}

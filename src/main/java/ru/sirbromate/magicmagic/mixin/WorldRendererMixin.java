@@ -37,8 +37,8 @@ public class WorldRendererMixin {
     private ClientWorld world;
 
 
-    @Redirect(method = "renderSky", at = @At(value = "INVOKE",
-            target = "Lnet/minecraft/client/texture/TextureManager;bindTexture(Lnet/minecraft/util/Identifier;)V", ordinal = 1)
+/*    @Redirect(method = "renderSky", at = @At(value = "INVOKE",
+            target = "Lnet/minecraft/client/texture/TextureManager;bindTexture(Lnet/minecraft/util/Identifier;)V", ordinal = 0)
     )
     private void redirectMoonTexture(TextureManager textureManager, Identifier id) {
         if ((WorldCorruption.CORRUPTION.get(world).corruptionLevel() >= 10) && (WorldCorruption.CORRUPTION.get(world).corruptionLevel() < 50)) {
@@ -50,5 +50,5 @@ public class WorldRendererMixin {
         } else {
             this.textureManager.bindTexture(MOON_PHASES); //0-9
         }
-    }
+    }*/
 }

@@ -8,7 +8,7 @@ import ru.sirbromate.magicmagic.Main;
 
 
 public class ModDimensions {
-    public static final RegistryKey<World> FROZEN_WORLD = RegistryKey.of(Registry.DIMENSION, Main.locate("frozenworld"));
+    public static final RegistryKey<World> FROZEN_WORLD = RegistryKey.of(Registry.WORLD_KEY, Main.locate("frozenworld"));
 
     public static void init() {
         Registry.register(Registry.CHUNK_GENERATOR, Main.locate("frozenworld"), ChunkGenerator.CODEC);

@@ -21,14 +21,15 @@ public class Main implements ModInitializer {
         ModItems.init(); // Items
         ModBlocks.init(); // Blocks
         ModSounds.init(); // Sounds
-        ModItemGroup.initialize(); // Creative Tab
-        DeltaStoneWorldGen.initialize(); // Ore gen
+        ModItemGroup.init(); // Creative Tab
+        DeltaStoneWorldGen.init(); // Ore gen
         ModTags.init(); // Tags
-        ModBiomes.registerBiomes(); // Biomes
+        ModBiomes.init(); // Biomes
         ModDimensions.init(); // Dimensions
         ModFeatures.init(); // World gen features
         ModEntities.init(); // Entities
         ModStatusEffect.init(); // Status effects
         ModEnchantments.init(); // Enchantments
+        ModSurfaceBuilders.init(); // Surface Builders
     }
 }

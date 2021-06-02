@@ -11,6 +11,6 @@ public class ModItemGroup {
             Main.locate("magicmagic"),
             () -> new ItemStack(ModItems.MAGIC_DELTA));
 
-    public static void initialize() {
+    public static void init() {
     }
 }

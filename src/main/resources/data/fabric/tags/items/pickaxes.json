@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "magicmagic:firedeltapick"
+    "magicmagic:firedeltapick",
+    "magicmagic:magicdeltapick",
+    "magicmagic:electrodeltapick",
+    "magicmagic:waterdeltapick"
   ]
 }

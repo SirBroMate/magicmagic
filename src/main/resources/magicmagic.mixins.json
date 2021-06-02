@@ -1,12 +1,11 @@
 {
   "required": true,
   "package": "ru.sirbromate.magicmagic.mixin",
-  "compatibilityLevel": "JAVA_8",
+  "compatibilityLevel": "JAVA_16",
   "mixins": [
     "DefaultBiomeFeatureMixin"
   ],
   "client": [
-    "WorldRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1

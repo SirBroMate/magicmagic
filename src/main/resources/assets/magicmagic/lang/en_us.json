@@ -7,8 +7,16 @@
   "item.magicmagic.waterdelta": "§1Water Δ",
   "item.magicmagic.electrodelta": "§eElectro Δ",
   "item.magicmagic.firedeltapick": "§cFire Δ pickaxe",
+  "item.magicmagic.waterdeltapick":"§1Water Δ pickaxe",
+  "item.magicmagic.electrodeltapick": "§eElectro Δ pickaxe",
+  "item.magicmagic.magicdeltapick": "§dMagic Δ pickaxe",
   "item.magicmagic.brimball": "Brim Ball",
   "item.magicmagic.brimstaff": "Brim staff",
+  "block.magicmagic.frozenspruceleaves": "Frozen Spruce Leaves",
+  "block.magicmagic.frozensprucelog": "Frozen Spruce Log",
+  "block.magicmagic.frozendirt": "Frozen Dirt",
+  "block.magicmagic.crystaldelta": "Crystallized Delta",
+  "block.magicmagic.crystaldelta_lowpressure": "Low Pressure Crystallized Delta",
   "block.magicmagic.magicdeltastone": "§dMagic Δ Stone",
   "block.magicmagic.magicdeltabricks": "§dMagic Δ Bricks",
   "block.magicmagic.firedeltastone": "§cFire Δ Stone",
@@ -19,5 +27,9 @@
   "block.magicmagic.waterdeltabricks": "§1Water Δ Bricks",
   "block.magicmagic.rainbow_bricks": "§9Rainbow Bricks",
   "block.magicmagic.sparkling_rainbow_bricks": "§9Sparkling Rainbow Bricks",
-  "block.magicmagic.eyeblock": "EyeBlock"
+  "block.magicmagic.eyeblock": "EyeBlock",
+  "item.magicmagic.waterdeltapick.dest": "Extinguish fire and hot blocks.",
+  "item.magicmagic.electrodeltapick.dest": "Breaks all blocks twice faster.",
+  "item.magicmagic.firedeltapick.dest": "Melts ice.",
+  "item.magicmagic.magicdeltapick.dest": "Breaks obsidian like a butter."
 }
