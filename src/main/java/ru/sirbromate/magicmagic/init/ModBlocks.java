@@ -5,8 +5,6 @@ import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
-import net.minecraft.block.SaplingBlock;
-import net.minecraft.block.sapling.SpruceSaplingGenerator;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.sound.BlockSoundGroup;
@@ -36,7 +34,7 @@ public class ModBlocks {
     public static Block CRYSTAL_DELTA_LOWPRESSURE = new CrystalDeltaLPBlock();
     public static Block EYEBLOCK = new EyeBlock();
     public static Block YLUXCRYSTAL = new YluxCrystalBlock();
-    public static Block FROZEN_SAPLING = new FrozenSaplingBlock(new SpruceSaplingGenerator(), AbstractBlock.Settings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.GRASS));
+    public static Block FROZEN_SAPLING = new FrozenSaplingBlock(new FrozenTreeSupplingGenerator(), AbstractBlock.Settings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.GRASS));
 
     public static void init() {
         Registry.register(Registry.BLOCK, Main.locate("magicdeltastone"), MAGICDELTA_STONE);

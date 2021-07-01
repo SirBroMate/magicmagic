@@ -31,7 +31,7 @@ public class ReceiveEntityPacket {
                 e.setPos(pos.x, pos.y, pos.z);
                 e.prevPitch = pitch;
                 e.prevYaw = yaw;
-                e.setEntityId(entityId);
+                e.setId(entityId);
                 e.setUuid(uuid);
 
                 MinecraftClient.getInstance().world.addEntity(entityId, e);

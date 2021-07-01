@@ -15,7 +15,6 @@ public class Main implements ModInitializer {
         return new Identifier(MODID, location);
     }
 
-
     @Override
     public void onInitialize() {
         ModItems.init(); // Items
