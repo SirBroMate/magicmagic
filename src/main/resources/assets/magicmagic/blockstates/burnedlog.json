@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "magicmagic:block/burnedlog",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "magicmagic:block/burnedlog"
+    },
+    "axis=z": {
+      "model": "magicmagic:block/burnedlog_horizontal",
+      "x": 90
+    }
+  }
+}

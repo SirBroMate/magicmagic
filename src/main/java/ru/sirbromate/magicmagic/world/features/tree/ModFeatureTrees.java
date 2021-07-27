@@ -1,5 +1,6 @@
 package ru.sirbromate.magicmagic.world.features.tree;
 
+import net.minecraft.block.Blocks;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.util.registry.BuiltinRegistries;
@@ -11,9 +12,11 @@ import net.minecraft.world.gen.decorator.Decorator;
 import net.minecraft.world.gen.decorator.HeightmapDecoratorConfig;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
+import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
 import net.minecraft.world.gen.foliage.MegaPineFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.trunk.GiantTrunkPlacer;
+import net.minecraft.world.gen.trunk.LargeOakTrunkPlacer;
 import ru.sirbromate.magicmagic.Main;
 import ru.sirbromate.magicmagic.init.ModBlocks;
 
@@ -27,7 +30,6 @@ public class ModFeatureTrees {
     public static ConfiguredDecorator<?> SQUARE_HEIGHTMAP = HEIGHTMAP.spreadHorizontally();
 
 
-
     public static final TreeFeatureConfig FROZEN_SPRUCE_CONFIG = new TreeFeatureConfig.Builder(
             new SimpleBlockStateProvider(ModBlocks.FROZEN_SPRUCE_LOG.getDefaultState()),
             new GiantTrunkPlacer(20, 3, 21),
@@ -37,7 +39,19 @@ public class ModFeatureTrees {
             new TwoLayersFeatureSize(1, 1, 2))
             .build();
 
-    public static final ConfiguredFeature<TreeFeatureConfig, ?> FROZEN_SPRUCE = register("frozen_spruce", Feature.TREE.configure(ModFeatureTrees.FROZEN_SPRUCE_CONFIG));
+    public static final TreeFeatureConfig BURNED_TREE_CONFIG = new TreeFeatureConfig.Builder(
+            new SimpleBlockStateProvider(ModBlocks.BURNED_LOG.getDefaultState()),
+            new LargeOakTrunkPlacer(20, 3, 21),
+            new SimpleBlockStateProvider(Blocks.AIR.getDefaultState()),
+            new SimpleBlockStateProvider(ModBlocks.FROZEN_SAPLING.getDefaultState()),
+            new BlobFoliagePlacer(ConstantIntProvider.create(0), ConstantIntProvider.create(0), 0),
+            new TwoLayersFeatureSize(0, 0, 0))
+            .build();
+
+
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> FROZEN_SPRUCE = register("frozen_spruce", Feature.TREE.configure(FROZEN_SPRUCE_CONFIG));
     public static final ConfiguredFeature<?, ?> FROZEN_TREES = register("frozen_spruces", FROZEN_SPRUCE.decorate(SQUARE_HEIGHTMAP).decorate(Decorator.COUNT_EXTRA.configure(new CountExtraDecoratorConfig(32, 0.2F, 8))));
 
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> BURNED_TREE = register("burned_tree", Feature.TREE.configure(BURNED_TREE_CONFIG));
+    public static final ConfiguredFeature<?, ?> BURNED_TREES = register("burned_trees", BURNED_TREE.decorate(SQUARE_HEIGHTMAP).decorate(Decorator.COUNT_EXTRA.configure(new CountExtraDecoratorConfig(2, 0.05F, 3))));
 }

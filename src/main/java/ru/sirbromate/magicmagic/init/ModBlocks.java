@@ -4,13 +4,14 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.FallingBlock;
 import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.registry.Registry;
 import ru.sirbromate.magicmagic.Main;
-import ru.sirbromate.magicmagic.block.*;
+import ru.sirbromate.magicmagic.objects.block.*;
 import ru.sirbromate.magicmagic.itemgroup.ModItemGroup;
 
 public class ModBlocks {
@@ -28,13 +29,16 @@ public class ModBlocks {
     public static Block BOUNCEBLOCK = new BounceBlock();
     public static Block FROZEN_SPRUCE_LEAVES = new FrozenLeavesBlock();
     public static Block FROZEN_SPRUCE_LOG = new FrozenLogBlock();
-    public static Block FROZENDIRT = new Block(FabricBlockSettings.of(Material.SOIL).hardness(0.5f).sounds(BlockSoundGroup.GRAVEL).breakByTool(FabricToolTags.SHOVELS));
+    public static Block FROZENDIRT = new Block(FabricBlockSettings.of(Material.SOIL).hardness(0.5f).sounds(BlockSoundGroup.GRAVEL).breakByTool(FabricToolTags.SHOVELS).breakByHand(true));
     public static Block PORTAL_BLOCK = new BlockPortal();
     public static Block CRYSTAL_DELTA = new CrystalDeltaBlock();
     public static Block CRYSTAL_DELTA_LOWPRESSURE = new CrystalDeltaLPBlock();
     public static Block EYEBLOCK = new EyeBlock();
     public static Block YLUXCRYSTAL = new YluxCrystalBlock();
     public static Block FROZEN_SAPLING = new FrozenSaplingBlock(new FrozenTreeSupplingGenerator(), AbstractBlock.Settings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.GRASS));
+    public static Block BURNED_LOG = new BurnedLogBlock();
+    public static Block ASH = new FallingBlock(FabricBlockSettings.of(Material.SOIL).hardness(0.3F).sounds(BlockSoundGroup.SAND).breakByTool(FabricToolTags.SHOVELS).breakByHand(true));
+    public static Block CRYSTAL_GEL = new CrystalGelBlock();
 
     public static void init() {
         Registry.register(Registry.BLOCK, Main.locate("magicdeltastone"), MAGICDELTA_STONE);
@@ -58,6 +62,10 @@ public class ModBlocks {
         Registry.register(Registry.BLOCK, Main.locate("eyeblock"), EYEBLOCK);
         Registry.register(Registry.BLOCK, Main.locate("yluxcrystal"), YLUXCRYSTAL);
         Registry.register(Registry.BLOCK, Main.locate("frozensapling"), FROZEN_SAPLING);
+        Registry.register(Registry.BLOCK, Main.locate("burnedlog"), BURNED_LOG);
+        Registry.register(Registry.BLOCK, Main.locate("ash"), ASH);
+        Registry.register(Registry.BLOCK, Main.locate("crystal_gel"), CRYSTAL_GEL);
+
 
         // Item blocks
         Registry.register(Registry.ITEM, Main.locate("magicdeltastone"), new BlockItem(MAGICDELTA_STONE, new Item.Settings().group(ModItemGroup.MAGICMAGIC_IG)));
@@ -81,5 +89,9 @@ public class ModBlocks {
         Registry.register(Registry.ITEM, Main.locate("eyeblock"), new BlockItem(EYEBLOCK, new Item.Settings().group(ModItemGroup.MAGICMAGIC_IG)));
         Registry.register(Registry.ITEM, Main.locate("yluxcrystal"), new BlockItem(YLUXCRYSTAL, new Item.Settings().group(ModItemGroup.MAGICMAGIC_IG)));
         Registry.register(Registry.ITEM, Main.locate("frozensapling"), new BlockItem(FROZEN_SAPLING, new Item.Settings().group(ModItemGroup.MAGICMAGIC_IG)));
+        Registry.register(Registry.ITEM, Main.locate("burnedlog"), new BlockItem(BURNED_LOG, new Item.Settings().group(ModItemGroup.MAGICMAGIC_IG)));
+        Registry.register(Registry.ITEM, Main.locate("ash"), new BlockItem(ASH, new Item.Settings().group(ModItemGroup.MAGICMAGIC_IG)));
+        Registry.register(Registry.ITEM, Main.locate("crystal_gel"), new BlockItem(CRYSTAL_GEL, new Item.Settings().group(ModItemGroup.MAGICMAGIC_IG)));
+
     }
 }
