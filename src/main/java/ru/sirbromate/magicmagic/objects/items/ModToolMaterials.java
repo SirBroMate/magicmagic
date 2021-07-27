@@ -1,4 +1,4 @@
-package ru.sirbromate.magicmagic.items;
+package ru.sirbromate.magicmagic.objects.items;
 
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;

@@ -6,7 +6,7 @@ import net.minecraft.world.gen.surfacebuilder.SurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilder.SurfaceConfig;
 import net.minecraft.world.gen.surfacebuilder.TernarySurfaceConfig;
 import ru.sirbromate.magicmagic.Main;
-import ru.sirbromate.magicmagic.world.biomes.surfacebuilder.CliffSB;
+import ru.sirbromate.magicmagic.world.biomes.surfacebuilder.FireSB;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -14,7 +14,7 @@ import java.util.Map;
 public class ModSurfaceBuilders {
     private static final Map<Identifier, SurfaceBuilder<? extends SurfaceConfig>> SURFACE_BUILDERS = new HashMap<>();
 
-    public static final SurfaceBuilder<TernarySurfaceConfig> CLIFF = add("cliff", new CliffSB(TernarySurfaceConfig.CODEC));
+    public static final SurfaceBuilder<TernarySurfaceConfig> FIREGROUND = add("fireground", new FireSB(TernarySurfaceConfig.CODEC));
 
     private static <S extends SurfaceBuilder<? extends SurfaceConfig>> S add(String name, S feature) {
         SURFACE_BUILDERS.put(Main.locate(name), feature);

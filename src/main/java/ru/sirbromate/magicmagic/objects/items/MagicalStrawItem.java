@@ -1,4 +1,4 @@
-package ru.sirbromate.magicmagic.items;
+package ru.sirbromate.magicmagic.objects.items;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.client.MinecraftClient;

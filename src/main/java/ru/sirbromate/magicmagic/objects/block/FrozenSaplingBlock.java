@@ -1,4 +1,4 @@
-package ru.sirbromate.magicmagic.block;
+package ru.sirbromate.magicmagic.objects.block;
 
 import net.minecraft.block.SaplingBlock;
 import net.minecraft.block.sapling.SaplingGenerator;

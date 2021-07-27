@@ -1,4 +1,4 @@
-package ru.sirbromate.magicmagic.block;
+package ru.sirbromate.magicmagic.objects.block;
 
 import net.minecraft.block.sapling.LargeTreeSaplingGenerator;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
@@ -12,13 +12,13 @@ public class FrozenTreeSupplingGenerator extends LargeTreeSaplingGenerator {
 
     @Nullable
     @Override
-    protected ConfiguredFeature<TreeFeatureConfig, ?> createLargeTreeFeature(Random random) {
+    protected ConfiguredFeature<TreeFeatureConfig, ?> getLargeTreeFeature(Random random) {
         return null;
     }
 
     @Nullable
     @Override
-    protected ConfiguredFeature<TreeFeatureConfig, ?> createTreeFeature(Random random, boolean bees) {
+    protected ConfiguredFeature<TreeFeatureConfig, ?> getTreeFeature(Random random, boolean bees) {
         return ModFeatureTrees.FROZEN_SPRUCE;
     }
 }

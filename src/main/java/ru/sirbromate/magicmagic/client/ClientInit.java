@@ -23,6 +23,7 @@ public class ClientInit implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlocks(cutout, ModBlocks.FROZEN_SPRUCE_LEAVES);
         BlockRenderLayerMap.INSTANCE.putBlocks(translucent, ModBlocks.CRYSTAL_DELTA_LOWPRESSURE);
         BlockRenderLayerMap.INSTANCE.putBlocks(cutout, ModBlocks.YLUXCRYSTAL);
+        BlockRenderLayerMap.INSTANCE.putBlocks(translucent, ModBlocks.CRYSTAL_GEL);
     }
 
     @Override

@@ -1,9 +1,8 @@
-package ru.sirbromate.magicmagic.items;
+package ru.sirbromate.magicmagic.objects.items;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.PickaxeItem;
@@ -16,7 +15,6 @@ import net.minecraft.text.TranslatableText;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
-import ru.sirbromate.magicmagic.init.ModTags;
 import ru.sirbromate.magicmagic.itemgroup.ModItemGroup;
 
 import java.util.List;

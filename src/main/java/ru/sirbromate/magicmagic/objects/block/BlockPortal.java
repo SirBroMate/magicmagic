@@ -1,4 +1,4 @@
-package ru.sirbromate.magicmagic.block;
+package ru.sirbromate.magicmagic.objects.block;
 
 import net.fabricmc.fabric.api.dimension.v1.FabricDimensions;
 import net.minecraft.block.Block;

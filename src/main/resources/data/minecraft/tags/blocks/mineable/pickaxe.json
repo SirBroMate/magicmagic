@@ -1,0 +1,17 @@
+{
+  "replace": "false",
+  "values": [
+    "magicmagic:magicdeltastone",
+    "magicmagic:magicdeltabricks",
+    "magicmagic:firedeltastone",
+    "magicmagic:firedeltabricks",
+    "magicmagic:electrodeltastone",
+    "magicmagic:electrodeltabricks",
+    "magicmagic:waterdeltastone",
+    "magicmagic:waterdeltabricks",
+    "magicmagic:rainbow_bricks",
+    "magicmagic:sparkling_rainbow_bricks",
+    "magicmagic:crystaldelta",
+    "magicmagic:crystaldelta_lowpressure"
+  ]
+}

@@ -1,4 +1,4 @@
-package ru.sirbromate.magicmagic.block;
+package ru.sirbromate.magicmagic.objects.block;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
