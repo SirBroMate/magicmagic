@@ -1,6 +1,7 @@
 {
   "enchantment.magicmagic.reversepower": "Power Reversal",
   "effect.magicmagic.brim": "Brim",
+  
   "item.magicmagic.magicstraw": "Magic Straw",
   "item.magicmagic.magicdelta": "§dMagic Δ",
   "item.magicmagic.firedelta": "§cFire Δ",
@@ -12,6 +13,8 @@
   "item.magicmagic.magicdeltapick": "§dMagic Δ pickaxe",
   "item.magicmagic.brimball": "Brim Ball",
   "item.magicmagic.brimstaff": "Brim staff",
+  "item.magicmagic.firestaff" : "Fire Staff",
+
   "block.magicmagic.frozenspruceleaves": "Frozen Spruce Leaves",
   "block.magicmagic.frozensprucelog": "Frozen Spruce Log",
   "block.magicmagic.frozendirt": "Frozen Dirt",
@@ -28,6 +31,7 @@
   "block.magicmagic.rainbow_bricks": "§9Rainbow Bricks",
   "block.magicmagic.sparkling_rainbow_bricks": "§9Sparkling Rainbow Bricks",
   "block.magicmagic.eyeblock": "EyeBlock",
+
   "item.magicmagic.waterdeltapick.dest": "Extinguish fire and hot blocks.",
   "item.magicmagic.electrodeltapick.dest": "Breaks all blocks twice faster.",
   "item.magicmagic.firedeltapick.dest": "Melts ice.",
