@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "m#m",
+    " m ",
+    " i "
+  ],
+  "key": {
+    "#": {
+      "item": "magicmagic:brimball"
+    },
+    "i": {
+      "item": "minecraft:iron_ingot"
+    },
+    "m": {
+      "item": "magicmagic:magicdelta"
+    }
+  },
+  "result": {
+    "item": "magicmagic:brimstaff",
+    "count": 1
+  }
+}

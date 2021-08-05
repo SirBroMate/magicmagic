@@ -10,7 +10,7 @@ public class Main implements ModInitializer {
     public static String MODID = "magicmagic";
 
 //    public static final Logger logger = LogManager.getLogger(MODID);
-    
+
     public static Identifier locate(String location) {
         return new Identifier(MODID, location);
     }

@@ -27,8 +27,8 @@ public class FireStaff extends Item {
         world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_BLAZE_SHOOT, SoundCategory.NEUTRAL, 0.5F, 0.1F / (random.nextFloat() * 0.4F + 0.8F));
 
         for (int i = 0; i < 3; i++) {
-            SmallFireballEntity fireballEntity = new SmallFireballEntity(world, user.getX(), user.getY() + 1.0F, user.getZ(), user.getRotationVector().getX() , -4, user.getRotationVector().getZ());
-            fireballEntity.setProperties(user, user.getPitch(), user.getYaw(), 0.0F,3.0F, 10.0F);
+            SmallFireballEntity fireballEntity = new SmallFireballEntity(world, user.getX(), user.getY() + 1.0F, user.getZ(), user.getRotationVector().getX(), -4, user.getRotationVector().getZ());
+            fireballEntity.setProperties(user, user.getPitch(), user.getYaw(), 0.0F, 3.0F, 10.0F);
             world.spawnEntity(fireballEntity);
         }
         return TypedActionResult.success(itemStack, world.isClient());

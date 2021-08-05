@@ -25,6 +25,7 @@ public class MagicDeltaPick extends PickaxeItem {
                 -2.8F,
                 new Settings().group(ModItemGroup.MAGICMAGIC_IG));
     }
+
     @Override
     public boolean postMine(ItemStack stack, World world, BlockState state, BlockPos pos, LivingEntity miner) {
         // I dunno why particles is not spawning in postMine method

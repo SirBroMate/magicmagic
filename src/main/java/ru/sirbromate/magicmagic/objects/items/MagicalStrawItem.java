@@ -1,7 +1,6 @@
 package ru.sirbromate.magicmagic.objects.items;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
@@ -28,7 +27,7 @@ public class MagicalStrawItem extends Item {
 
     @Override
     public ActionResult useOnEntity(ItemStack stack, PlayerEntity user, LivingEntity entity, Hand hand) {
-        World world = MinecraftClient.getInstance().world;
+        World world = user.getEntityWorld();
 
         if (!user.getItemCooldownManager().isCoolingDown(this)) {
             entity.damage(DamageSource.DRYOUT, 1);

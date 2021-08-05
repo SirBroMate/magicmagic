@@ -11,11 +11,11 @@ public class ModConfiguredFeatures {
         builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModFeatureTrees.FROZEN_TREES);
     }
 
-    public static void addBurnedTree(GenerationSettings.Builder builder){
+    public static void addBurnedTree(GenerationSettings.Builder builder) {
         builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModFeatureTrees.BURNED_TREES);
     }
 
-    public static void addFallenTree(GenerationSettings.Builder builder){
+    public static void addFallenTree(GenerationSettings.Builder builder) {
         builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModFeatures.FALEED_TREE_CONFIG);
     }
 }

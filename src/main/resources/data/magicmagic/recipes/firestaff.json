@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " f ",
+    " i ",
+    " i "
+  ],
+  "key": {
+    "i": {
+      "item": "minecraft:iron_ingot"
+    },
+    "f": {
+      "item": "magicmagic:firedelta"
+    }
+  },
+  "result": {
+    "item": "magicmagic:brimstaff",
+    "count": 1
+  }
+}

@@ -8,11 +8,12 @@ import net.minecraft.block.FallingBlock;
 import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.registry.Registry;
 import ru.sirbromate.magicmagic.Main;
-import ru.sirbromate.magicmagic.objects.block.*;
 import ru.sirbromate.magicmagic.itemgroup.ModItemGroup;
+import ru.sirbromate.magicmagic.objects.block.*;
 
 public class ModBlocks {
     public static Block MAGICDELTA_STONE = new DeltaStoneBlock();
@@ -23,75 +24,86 @@ public class ModBlocks {
     public static Block ELECTRODELTA_BRICKS = new DeltaBricksBlock();
     public static Block WATERDELTA_STONE = new DeltaStoneBlock();
     public static Block WATERDELTA_BRICKS = new DeltaBricksBlock();
-    public static Block RAINBOWBRICKS = new RainbowBricksBlock();
-    public static Block SPARKLING_RAINBOWBRICKS = new RainbowBricksBlock();
+    public static Block RAINBOW_BRICKS = new RainbowBricksBlock();
+    public static Block SPARKLING_RAINBOW_BRICKS = new RainbowBricksBlock();
     public static Block DELTABLOCK = new DeltaBlock();
-    public static Block BOUNCEBLOCK = new BounceBlock();
+    public static Block BOUNCE_BLOCK = new BounceBlock();
     public static Block FROZEN_SPRUCE_LEAVES = new FrozenLeavesBlock();
     public static Block FROZEN_SPRUCE_LOG = new FrozenLogBlock();
-    public static Block FROZENDIRT = new Block(FabricBlockSettings.of(Material.SOIL).hardness(0.5f).sounds(BlockSoundGroup.GRAVEL).breakByTool(FabricToolTags.SHOVELS).breakByHand(true));
+    public static Block FROZEN_DIRT = new Block(FabricBlockSettings.of(Material.SOIL).hardness(0.5f).sounds(BlockSoundGroup.GRAVEL).breakByTool(FabricToolTags.SHOVELS).breakByHand(true));
     public static Block PORTAL_BLOCK = new BlockPortal();
     public static Block CRYSTAL_DELTA = new CrystalDeltaBlock();
-    public static Block CRYSTAL_DELTA_LOWPRESSURE = new CrystalDeltaLPBlock();
-    public static Block EYEBLOCK = new EyeBlock();
-    public static Block YLUXCRYSTAL = new YluxCrystalBlock();
+    public static Block CRYSTAL_DELTA_TRANSPARENT = new CrystalDeltaLPBlock();
+    public static Block EYE_BLOCK = new EyeBlock();
+    public static Block YLUX_CRYSTAL = new YluxCrystalBlock();
     public static Block FROZEN_SAPLING = new FrozenSaplingBlock(new FrozenTreeSupplingGenerator(), AbstractBlock.Settings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.GRASS));
     public static Block BURNED_LOG = new BurnedLogBlock();
     public static Block ASH = new FallingBlock(FabricBlockSettings.of(Material.SOIL).hardness(0.3F).sounds(BlockSoundGroup.SAND).breakByTool(FabricToolTags.SHOVELS).breakByHand(true));
     public static Block CRYSTAL_GEL = new CrystalGelBlock();
+    public static Block RAINBOW_CRYSTAL = new RainbowCrystalBlock();
+
 
     public static void init() {
-        Registry.register(Registry.BLOCK, Main.locate("magicdeltastone"), MAGICDELTA_STONE);
-        Registry.register(Registry.BLOCK, Main.locate("magicdeltabricks"), MAGICDELTA_BRICKS);
-        Registry.register(Registry.BLOCK, Main.locate("firedeltabricks"), FIREDELTA_BRICKS);
-        Registry.register(Registry.BLOCK, Main.locate("firedeltastone"), FIREDELTA_STONE);
-        Registry.register(Registry.BLOCK, Main.locate("electrodeltastone"), ELECTRODELTA_STONE);
-        Registry.register(Registry.BLOCK, Main.locate("electrodeltabricks"), ELECTRODELTA_BRICKS);
-        Registry.register(Registry.BLOCK, Main.locate("waterdeltastone"), WATERDELTA_STONE);
-        Registry.register(Registry.BLOCK, Main.locate("waterdeltabricks"), WATERDELTA_BRICKS);
-        Registry.register(Registry.BLOCK, Main.locate("rainbow_bricks"), RAINBOWBRICKS);
-        Registry.register(Registry.BLOCK, Main.locate("sparkling_rainbow_bricks"), SPARKLING_RAINBOWBRICKS);
-        Registry.register(Registry.BLOCK, Main.locate("deltablock"), DELTABLOCK);
-        Registry.register(Registry.BLOCK, Main.locate("bounceblock"), BOUNCEBLOCK);
-        Registry.register(Registry.BLOCK, Main.locate("frozenspruceleaves"), FROZEN_SPRUCE_LEAVES);
-        Registry.register(Registry.BLOCK, Main.locate("frozensprucelog"), FROZEN_SPRUCE_LOG);
-        Registry.register(Registry.BLOCK, Main.locate("frozendirt"), FROZENDIRT);
-        Registry.register(Registry.BLOCK, Main.locate("blockportal"), PORTAL_BLOCK);
-        Registry.register(Registry.BLOCK, Main.locate("crystaldelta"), CRYSTAL_DELTA);
-        Registry.register(Registry.BLOCK, Main.locate("crystaldelta_lowpressure"), CRYSTAL_DELTA_LOWPRESSURE);
-        Registry.register(Registry.BLOCK, Main.locate("eyeblock"), EYEBLOCK);
-        Registry.register(Registry.BLOCK, Main.locate("yluxcrystal"), YLUXCRYSTAL);
-        Registry.register(Registry.BLOCK, Main.locate("frozensapling"), FROZEN_SAPLING);
-        Registry.register(Registry.BLOCK, Main.locate("burnedlog"), BURNED_LOG);
-        Registry.register(Registry.BLOCK, Main.locate("ash"), ASH);
-        Registry.register(Registry.BLOCK, Main.locate("crystal_gel"), CRYSTAL_GEL);
+        registerBlock(MAGICDELTA_STONE, "magicdeltastone");
+        registerBlock(MAGICDELTA_BRICKS, "magicdeltabricks");
+        registerBlock(FIREDELTA_STONE, "firedeltastone");
+        registerBlock(FIREDELTA_BRICKS, "firedeltabricks");
+        registerBlock(ELECTRODELTA_STONE, "electrodeltastone");
+        registerBlock(ELECTRODELTA_BRICKS, "electrodeltabricks");
+        registerBlock(WATERDELTA_STONE, "waterdeltastone");
+        registerBlock(WATERDELTA_BRICKS, "waterdeltabricks");
+        registerBlock(DELTABLOCK, "deltablock");
+        registerBlock(BOUNCE_BLOCK, "bounceblock");
+        registerBlock(FROZEN_SPRUCE_LOG, "frozen_spruce_log");
+        registerBlock(FROZEN_SPRUCE_LEAVES, "frozen_spruce_leaves");
+        registerBlock(FROZEN_SAPLING, "frozen_sapling");
+        registerBlock(FROZEN_DIRT, "frozendirt");
+        registerBlock(PORTAL_BLOCK, "portalblock");
+        registerBlock(CRYSTAL_DELTA, "crystaldelta");
+        registerBlock(CRYSTAL_DELTA_TRANSPARENT, "crystaldelta_transparent");
+        registerBlock(EYE_BLOCK, "eyeblock");
+        registerBlock(YLUX_CRYSTAL, "yluxcrystal");
+        registerBlock(BURNED_LOG, "burnedlog");
+        registerBlock(ASH, "ash");
+        registerBlock(CRYSTAL_GEL, "crystalgel");
+        registerBlock(RAINBOW_CRYSTAL, "rainbowcrystal");
+        registerBlock(RAINBOW_BRICKS, "rainbowbricks");
+        registerBlock(SPARKLING_RAINBOW_BRICKS, "sparkling_rainbow_bricks");
 
 
         // Item blocks
-        Registry.register(Registry.ITEM, Main.locate("magicdeltastone"), new BlockItem(MAGICDELTA_STONE, new Item.Settings().group(ModItemGroup.MAGICMAGIC_IG)));
-        Registry.register(Registry.ITEM, Main.locate("magicdeltabricks"), new BlockItem(MAGICDELTA_BRICKS, new Item.Settings().group(ModItemGroup.MAGICMAGIC_IG)));
-        Registry.register(Registry.ITEM, Main.locate("firedeltastone"), new BlockItem(FIREDELTA_STONE, new Item.Settings().group(ModItemGroup.MAGICMAGIC_IG)));
-        Registry.register(Registry.ITEM, Main.locate("firedeltabricks"), new BlockItem(FIREDELTA_BRICKS, new Item.Settings().group(ModItemGroup.MAGICMAGIC_IG)));
-        Registry.register(Registry.ITEM, Main.locate("electrodeltastone"), new BlockItem(ELECTRODELTA_STONE, new Item.Settings().group(ModItemGroup.MAGICMAGIC_IG)));
-        Registry.register(Registry.ITEM, Main.locate("electrodeltabricks"), new BlockItem(ELECTRODELTA_BRICKS, new Item.Settings().group(ModItemGroup.MAGICMAGIC_IG)));
-        Registry.register(Registry.ITEM, Main.locate("waterdeltastone"), new BlockItem(WATERDELTA_STONE, new Item.Settings().group(ModItemGroup.MAGICMAGIC_IG)));
-        Registry.register(Registry.ITEM, Main.locate("waterdeltabricks"), new BlockItem(WATERDELTA_BRICKS, new Item.Settings().group(ModItemGroup.MAGICMAGIC_IG)));
-        Registry.register(Registry.ITEM, Main.locate("rainbow_bricks"), new BlockItem(RAINBOWBRICKS, new Item.Settings().group(ModItemGroup.MAGICMAGIC_IG)));
-        Registry.register(Registry.ITEM, Main.locate("sparkling_rainbow_bricks"), new BlockItem(SPARKLING_RAINBOWBRICKS, new Item.Settings().group(ModItemGroup.MAGICMAGIC_IG)));
-        Registry.register(Registry.ITEM, Main.locate("deltablock"), new BlockItem(DELTABLOCK, new Item.Settings().group(ModItemGroup.MAGICMAGIC_IG)));
-        Registry.register(Registry.ITEM, Main.locate("bounceblock"), new BlockItem(BOUNCEBLOCK, new Item.Settings().group(ModItemGroup.MAGICMAGIC_IG)));
-        Registry.register(Registry.ITEM, Main.locate("frozenspruceleaves"), new BlockItem(FROZEN_SPRUCE_LEAVES, new Item.Settings().group(ModItemGroup.MAGICMAGIC_IG)));
-        Registry.register(Registry.ITEM, Main.locate("frozensprucelog"), new BlockItem(FROZEN_SPRUCE_LOG, new Item.Settings().group(ModItemGroup.MAGICMAGIC_IG)));
-        Registry.register(Registry.ITEM, Main.locate("frozendirt"), new BlockItem(FROZENDIRT, new Item.Settings().group(ModItemGroup.MAGICMAGIC_IG)));
-        Registry.register(Registry.ITEM, Main.locate("blockportal"), new BlockItem(PORTAL_BLOCK, new Item.Settings().group(ModItemGroup.MAGICMAGIC_IG)));
-        Registry.register(Registry.ITEM, Main.locate("crystaldelta"), new BlockItem(CRYSTAL_DELTA, new Item.Settings().group(ModItemGroup.MAGICMAGIC_IG)));
-        Registry.register(Registry.ITEM, Main.locate("crystaldelta_lowpressure"), new BlockItem(CRYSTAL_DELTA_LOWPRESSURE, new Item.Settings().group(ModItemGroup.MAGICMAGIC_IG)));
-        Registry.register(Registry.ITEM, Main.locate("eyeblock"), new BlockItem(EYEBLOCK, new Item.Settings().group(ModItemGroup.MAGICMAGIC_IG)));
-        Registry.register(Registry.ITEM, Main.locate("yluxcrystal"), new BlockItem(YLUXCRYSTAL, new Item.Settings().group(ModItemGroup.MAGICMAGIC_IG)));
-        Registry.register(Registry.ITEM, Main.locate("frozensapling"), new BlockItem(FROZEN_SAPLING, new Item.Settings().group(ModItemGroup.MAGICMAGIC_IG)));
-        Registry.register(Registry.ITEM, Main.locate("burnedlog"), new BlockItem(BURNED_LOG, new Item.Settings().group(ModItemGroup.MAGICMAGIC_IG)));
-        Registry.register(Registry.ITEM, Main.locate("ash"), new BlockItem(ASH, new Item.Settings().group(ModItemGroup.MAGICMAGIC_IG)));
-        Registry.register(Registry.ITEM, Main.locate("crystal_gel"), new BlockItem(CRYSTAL_GEL, new Item.Settings().group(ModItemGroup.MAGICMAGIC_IG)));
+        registerBlockItem(MAGICDELTA_STONE, "magicdeltastone", ModItemGroup.MAGICMAGIC_IG);
+        registerBlockItem(MAGICDELTA_BRICKS, "magicdeltabricks", ModItemGroup.MAGICMAGIC_IG);
+        registerBlockItem(FIREDELTA_STONE, "firedeltastone", ModItemGroup.MAGICMAGIC_IG);
+        registerBlockItem(FIREDELTA_BRICKS, "firedeltabricks", ModItemGroup.MAGICMAGIC_IG);
+        registerBlockItem(ELECTRODELTA_STONE, "electrodeltastone", ModItemGroup.MAGICMAGIC_IG);
+        registerBlockItem(ELECTRODELTA_BRICKS, "electrodeltabricks", ModItemGroup.MAGICMAGIC_IG);
+        registerBlockItem(WATERDELTA_STONE, "waterdeltastone", ModItemGroup.MAGICMAGIC_IG);
+        registerBlockItem(WATERDELTA_BRICKS, "waterdeltabricks", ModItemGroup.MAGICMAGIC_IG);
+        registerBlockItem(RAINBOW_BRICKS, "rainbowbricks", ModItemGroup.MAGICMAGIC_IG);
+        registerBlockItem(SPARKLING_RAINBOW_BRICKS, "sparkling_rainbow_bricks", ModItemGroup.MAGICMAGIC_IG);
+        registerBlockItem(DELTABLOCK, "deltablock", ModItemGroup.MAGICMAGIC_IG);
+        registerBlockItem(BOUNCE_BLOCK, "bounceblock", ModItemGroup.MAGICMAGIC_IG);
+        registerBlockItem(FROZEN_SPRUCE_LOG, "frozen_spruce_log", ModItemGroup.MAGICMAGIC_IG);
+        registerBlockItem(FROZEN_SPRUCE_LEAVES, "frozen_spruce_leaves", ModItemGroup.MAGICMAGIC_IG);
+        registerBlockItem(FROZEN_SAPLING, "frozen_sapling", ModItemGroup.MAGICMAGIC_IG);
+        registerBlockItem(FROZEN_DIRT, "frozendirt", ModItemGroup.MAGICMAGIC_IG);
+        registerBlockItem(PORTAL_BLOCK, "portalblock", ModItemGroup.MAGICMAGIC_IG);
+        registerBlockItem(CRYSTAL_DELTA, "crystaldelta", ModItemGroup.MAGICMAGIC_IG);
+        registerBlockItem(CRYSTAL_DELTA_TRANSPARENT, "crystaldelta_transparent", ModItemGroup.MAGICMAGIC_IG);
+        registerBlockItem(EYE_BLOCK, "eyeblock", ModItemGroup.MAGICMAGIC_IG);
+        registerBlockItem(YLUX_CRYSTAL, "yluxcrystal", ModItemGroup.MAGICMAGIC_IG);
+        registerBlockItem(BURNED_LOG, "burnedlog", ModItemGroup.MAGICMAGIC_IG);
+        registerBlockItem(ASH, "ash", ModItemGroup.MAGICMAGIC_IG);
+        registerBlockItem(CRYSTAL_GEL, "crystalgel", ModItemGroup.MAGICMAGIC_IG);
+        registerBlockItem(RAINBOW_CRYSTAL, "rainbowcrystal", ModItemGroup.MAGICMAGIC_IG);
+    }
 
+    private static void registerBlock(Block block, String id) {
+        Registry.register(Registry.BLOCK, Main.locate(id), block);
+    }
+
+    private static void registerBlockItem(Block block, String id, ItemGroup group) {
+        Registry.register(Registry.ITEM, Main.locate(id), new BlockItem(block, new Item.Settings().group(group)));
     }
 }

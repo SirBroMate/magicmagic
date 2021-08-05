@@ -12,6 +12,7 @@ public class ModTags {
     public static final Tag<Block> ELECTRODELTA_TAG = TagRegistry.block(Main.locate("electrodeltas"));
     public static final Tag<Block> WATERDELTA_TAG = TagRegistry.block(Main.locate("waterdeltas"));
     public static final Tag<Block> MAGICDELTA_TAG = TagRegistry.block(Main.locate("magicdeltas"));
+
     public static void init() {
     }
 }

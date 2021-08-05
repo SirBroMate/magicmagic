@@ -1,7 +1,7 @@
 package ru.sirbromate.magicmagic.client;
 
 import io.netty.buffer.Unpooled;
-import net.fabricmc.fabric.api.network.ServerSidePacketRegistry;
+import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.entity.Entity;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
@@ -23,15 +23,15 @@ public class EntitySpawnPacket {
         PacketBufUtil.writeVec3d(byteBuf, new Vec3d(e.getX(), e.getY(), e.getZ()));
         PacketBufUtil.writeAngle(byteBuf, e.prevPitch);
         PacketBufUtil.writeAngle(byteBuf, e.prevYaw);
-        return ServerSidePacketRegistry.INSTANCE.toPacket(packetID, byteBuf);
+        return ServerPlayNetworking.createS2CPacket(packetID, byteBuf);
     }
+
     public static final class PacketBufUtil {
 
         /**
          * Packs a floating-point angle into a {@code byte}.
          *
-         * @param angle
-         *         angle
+         * @param angle angle
          * @return packed angle
          */
         public static byte packAngle(float angle) {
@@ -41,8 +41,7 @@ public class EntitySpawnPacket {
         /**
          * Unpacks a floating-point angle from a {@code byte}.
          *
-         * @param angleByte
-         *         packed angle
+         * @param angleByte packed angle
          * @return angle
          */
         public static float unpackAngle(byte angleByte) {
@@ -52,10 +51,8 @@ public class EntitySpawnPacket {
         /**
          * Writes an angle to a {@link PacketByteBuf}.
          *
-         * @param byteBuf
-         *         destination buffer
-         * @param angle
-         *         angle
+         * @param byteBuf destination buffer
+         * @param angle   angle
          */
         public static void writeAngle(PacketByteBuf byteBuf, float angle) {
             byteBuf.writeByte(packAngle(angle));
@@ -64,8 +61,7 @@ public class EntitySpawnPacket {
         /**
          * Reads an angle from a {@link PacketByteBuf}.
          *
-         * @param byteBuf
-         *         source buffer
+         * @param byteBuf source buffer
          * @return angle
          */
         public static float readAngle(PacketByteBuf byteBuf) {
@@ -75,10 +71,8 @@ public class EntitySpawnPacket {
         /**
          * Writes a {@link Vec3d} to a {@link PacketByteBuf}.
          *
-         * @param byteBuf
-         *         destination buffer
-         * @param vec3d
-         *         vector
+         * @param byteBuf destination buffer
+         * @param vec3d   vector
          */
         public static void writeVec3d(PacketByteBuf byteBuf, Vec3d vec3d) {
             byteBuf.writeDouble(vec3d.x);
@@ -89,8 +83,7 @@ public class EntitySpawnPacket {
         /**
          * Reads a {@link Vec3d} from a {@link PacketByteBuf}.
          *
-         * @param byteBuf
-         *         source buffer
+         * @param byteBuf source buffer
          * @return vector
          */
         public static Vec3d readVec3d(PacketByteBuf byteBuf) {

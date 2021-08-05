@@ -20,6 +20,7 @@ public class BlockPortal extends Block {
         super(Settings.of(Material.AIR));
     }
 
+    @SuppressWarnings("deprecation")
     @Override
     public ActionResult onUse(BlockState stateBlock, World world, BlockPos blockPos, PlayerEntity playerEntity, Hand hand, BlockHitResult blockHitResult) {
         if (!world.isClient) {

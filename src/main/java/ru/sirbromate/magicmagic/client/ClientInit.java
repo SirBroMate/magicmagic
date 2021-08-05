@@ -8,6 +8,7 @@ import net.minecraft.client.render.RenderLayer;
 import net.minecraft.util.Identifier;
 import ru.sirbromate.magicmagic.Main;
 import ru.sirbromate.magicmagic.client.render.BrimBallRender;
+import ru.sirbromate.magicmagic.client.render.RainbowCrystalColor;
 import ru.sirbromate.magicmagic.init.ModBlocks;
 
 @Environment(EnvType.CLIENT)
@@ -21,8 +22,8 @@ public class ClientInit implements ClientModInitializer {
         RenderLayer translucent = RenderLayer.getTranslucent();
 
         BlockRenderLayerMap.INSTANCE.putBlocks(cutout, ModBlocks.FROZEN_SPRUCE_LEAVES);
-        BlockRenderLayerMap.INSTANCE.putBlocks(translucent, ModBlocks.CRYSTAL_DELTA_LOWPRESSURE);
-        BlockRenderLayerMap.INSTANCE.putBlocks(cutout, ModBlocks.YLUXCRYSTAL);
+        BlockRenderLayerMap.INSTANCE.putBlocks(translucent, ModBlocks.CRYSTAL_DELTA_TRANSPARENT);
+        BlockRenderLayerMap.INSTANCE.putBlocks(cutout, ModBlocks.YLUX_CRYSTAL);
         BlockRenderLayerMap.INSTANCE.putBlocks(translucent, ModBlocks.CRYSTAL_GEL);
     }
 
@@ -32,5 +33,6 @@ public class ClientInit implements ClientModInitializer {
         setBlockRenderLayout();
         BrimBallRender.init();
         ReceiveEntityPacket.receiveEntityPacket();
+        RainbowCrystalColor.init();
     }
 }

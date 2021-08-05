@@ -5,9 +5,7 @@ import net.minecraft.client.render.entity.FlyingItemEntityRenderer;
 import ru.sirbromate.magicmagic.init.ModEntities;
 
 public class BrimBallRender {
-
-    public static void init(){
-        EntityRendererRegistry.INSTANCE.register(ModEntities.PackedSnowballEntityType, (dispatcher) ->
-                new FlyingItemEntityRenderer(dispatcher));
+    public static void init() {
+        EntityRendererRegistry.INSTANCE.register(ModEntities.PackedSnowballEntityType, FlyingItemEntityRenderer::new);
     }
 }

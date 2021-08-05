@@ -17,20 +17,16 @@ public class FireSB extends SurfaceBuilder<TernarySurfaceConfig> {
     public static BlockState GRAVEL = Blocks.GRAVEL.getDefaultState();
     public static BlockState GRASS = Blocks.GRASS_BLOCK.getDefaultState();
     public static BlockState DIRT = Blocks.DIRT.getDefaultState();
-    public static BlockState ASH = ModBlocks.ASH.getDefaultState();
-
-
-    public static BlockState MAGMA = Blocks.MAGMA_BLOCK.getDefaultState();
-
     public static final TernarySurfaceConfig GRASS_CONFIG = new TernarySurfaceConfig(GRASS, DIRT, GRAVEL);
-    public static final TernarySurfaceConfig MAGMA_CONFIG = new TernarySurfaceConfig(MAGMA, ASH, GRAVEL);
+    public static BlockState ASH = ModBlocks.ASH.getDefaultState();
     public static final TernarySurfaceConfig ASH_CONFIG = new TernarySurfaceConfig(ASH, ASH, GRAVEL);
+    public static BlockState MAGMA = Blocks.MAGMA_BLOCK.getDefaultState();
+    public static final TernarySurfaceConfig MAGMA_CONFIG = new TernarySurfaceConfig(MAGMA, ASH, GRAVEL);
 
 
     public FireSB(Codec<TernarySurfaceConfig> codec) {
         super(codec);
     }
-
 
 
     @Override
